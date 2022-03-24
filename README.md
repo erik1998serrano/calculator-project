@@ -20,5 +20,5 @@ A calculator that does basic calculator things. Created during the javascript po
 -   Complete design and publish
 
 ![Calculator](https://i.gyazo.com/e840e9209adbc000cd5df36a040fa1f0.png)
+# INTENDED DESIGN NOT FINAL!!!!!!!!!!!!!!
 
-# calculator-project
