@@ -19,5 +19,6 @@ A calculator that does basic calculator things. Created during the javascript po
     -   Implement functions to do calculations
 -   Complete design and publish
 
-![Calculator](../calculator-project/assets/samsung-calculator.jpg)
+![Calculator](https://i.gyazo.com/e840e9209adbc000cd5df36a040fa1f0.png)
+
 # calculator-project
