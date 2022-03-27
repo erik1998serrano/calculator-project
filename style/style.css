@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.2rem;
 }
 
 body {
@@ -22,15 +21,19 @@ body {
 .container {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: repeat(6, 80px);
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, 100px);
   grid-template-areas: "display display display display" "clear clear clear divide" "seven eight nine multiply" "four five six subtract" "one two three add" "zero deci backspace equal";
   padding: 20px;
   background-color: #161b1e;
   border-radius: 10px;
 }
+.container__button {
+  font-size: 1.2rem;
+}
 .container__button--round {
   border-radius: 50%;
+  font-size: 1.2rem;
 }
 
 .display {
@@ -38,12 +41,13 @@ body {
   grid-area: display;
   background-color: #22353b;
   border-radius: 10px;
-  line-height: 80px;
-  font-size: 60px;
+  line-height: 85px;
   overflow: hidden;
-  padding: 6px 13px;
+  padding: 5px 10px;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  color: #dbe3e5;
   text-align: right;
 }
 

@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.2rem;
 }
 
 body {
@@ -25,8 +24,8 @@ body {
 .container {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(6, 80px);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 100px);
     grid-template-areas:
         "display display display display"
         "clear clear clear divide"
@@ -40,8 +39,11 @@ body {
     border-radius: 10px;
 
     &__button {
+        font-size: 1.2rem;
+
         &--round {
             border-radius: 50%;
+            font-size: 1.2rem;
         }
     }
 }
@@ -52,12 +54,13 @@ body {
     grid-area: display;
     background-color: palette.$display;
     border-radius: 10px;
-    line-height: 80px;
-    font-size: 60px;
+    line-height: 85px;
     overflow: hidden;
-    padding: 6px 13px;
+    padding: 5px 10px;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    color: palette.$numbers-text;
     text-align: right;
 }
 .clear {
