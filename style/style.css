@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1.2rem;
 }
 
 body {
-  background: green;
+  background: #23272e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +17,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 
 .container {
@@ -24,45 +24,50 @@ body {
   gap: 10px;
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: repeat(6, 80px);
-  grid-template-areas: "display display display display" "plus minus multiple division" "seven eight nine equal" "four five six equal" "one two three equal" "zero deci clear equal";
+  grid-template-areas: "display display display display" "clear clear clear divide" "seven eight nine multiply" "four five six subtract" "one two three add" "zero deci backspace equal";
   padding: 20px;
-  background-color: darkgray;
+  background-color: #161b1e;
   border-radius: 10px;
+}
+.container__button--round {
+  border-radius: 50%;
 }
 
 .display {
   display: inline-grid;
   grid-area: display;
-  background-color: #000000;
+  background-color: #22353b;
   border-radius: 10px;
-  color: white;
   line-height: 80px;
   font-size: 60px;
   overflow: hidden;
   padding: 6px 13px;
   box-sizing: border-box;
-  font-family: Calculus;
+  font-family: "Open Sans", sans-serif;
   text-align: right;
 }
 
+.clear {
+  grid-area: clear;
+  border-radius: 10px;
+  background-color: #dfe1f8;
+  color: #101c29;
+}
+
 .add {
-  grid-area: plus;
-  color: red;
+  grid-area: add;
 }
 
-.minus {
-  grid-area: minus;
-  color: red;
+.subtract {
+  grid-area: subtract;
 }
 
-.multiple {
-  grid-area: multiple;
-  color: red;
+.multiply {
+  grid-area: multiply;
 }
 
-.division {
-  grid-area: division;
-  color: red;
+.divide {
+  grid-area: divide;
 }
 
 .seven {
@@ -109,11 +114,22 @@ body {
   grid-area: deci;
 }
 
-.clear {
-  grid-area: clear;
-  background-color: blue;
+.backspace {
+  grid-area: backspace;
 }
 
 .equal {
   grid-area: equal;
+  background-color: #b7ebf8;
+  color: #101c29;
+}
+
+.operator {
+  background-color: #93add0;
+  color: #101c29;
+}
+
+.num {
+  background-color: #1a2527;
+  color: #dbe3e5;
 }

@@ -1,11 +1,14 @@
+@use "./partials/palette";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1.2rem;
 }
 
 body {
-    background: green;
+    background: palette.$bg;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,9 +19,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 
+// calculator container
 .container {
     display: grid;
     gap: 10px;
@@ -26,48 +29,60 @@ body {
     grid-template-rows: repeat(6, 80px);
     grid-template-areas:
         "display display display display"
-        "plus minus multiple division"
-        "seven eight nine equal"
-        "four five six equal"
-        "one two three equal"
-        "zero deci clear equal";
+        "clear clear clear divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three add"
+        "zero deci backspace equal";
     padding: 20px;
 
-    background-color: darkgray;
+    background-color: palette.$calc-bg;
     border-radius: 10px;
+
+    &__button {
+        &--round {
+            border-radius: 50%;
+        }
+    }
 }
 
+// display & clear section
 .display {
     display: inline-grid;
     grid-area: display;
-    background-color: #000000;
+    background-color: palette.$display;
     border-radius: 10px;
-    color: white;
     line-height: 80px;
     font-size: 60px;
     overflow: hidden;
     padding: 6px 13px;
     box-sizing: border-box;
-    font-family: Calculus;
+    font-family: "Open Sans", sans-serif;
     text-align: right;
 }
-.add {
-    grid-area: plus;
-    color: red;
-}
-.minus {
-    grid-area: minus;
-    color: red;
+.clear {
+    grid-area: clear;
+    border-radius: 10px;
+    background-color: palette.$clear-bg;
+    @extend %flexcenter;
+    color: palette.$operators-text;
 }
 
-.multiple {
-    grid-area: multiple;
-    color: red;
+// operator grid areas
+.add {
+    grid-area: add;
 }
-.division {
-    grid-area: division;
-    color: red;
+.subtract {
+    grid-area: subtract;
 }
+.multiply {
+    grid-area: multiply;
+}
+.divide {
+    grid-area: divide;
+}
+
+// number grid areas
 .seven {
     grid-area: seven;
 }
@@ -101,12 +116,22 @@ body {
 .deci {
     grid-area: deci;
 }
-.clear {
-    grid-area: clear;
-    background-color: blue;
-    @extend %flexcenter;
+.backspace {
+    grid-area: backspace;
 }
 .equal {
     grid-area: equal;
+    background-color: palette.$equals-bg;
+    color: palette.$operators-text;
     @extend %flexcenter;
+}
+
+// calculator colors
+.operator {
+    background-color: palette.$operators-bg;
+    color: palette.$operators-text;
+}
+.num {
+    background-color: palette.$numbers-bg;
+    color: palette.$numbers-text;
 }
