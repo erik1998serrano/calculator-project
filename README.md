@@ -2,7 +2,7 @@
 
 A calculator that does basic calculator things. Created during the javascript portion of the \_nology program and was implemented with knowledge gained during this time.
 
-### [Live Demo]()
+### [Live Demo]() NOT FUNCTIONAL YET
 
 ## Topics learned/practiced by developing this
 
