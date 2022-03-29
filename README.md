@@ -2,7 +2,7 @@
 
 A calculator that does basic calculator things. Created during the javascript portion of the \_nology program and was implemented with knowledge gained during this time.
 
-🔗 Live Demo](https://erikryan-s.github.io/calculator-project/
+🔗 [Live Demo](https://erikryan-s.github.io/calculator-project/)
 
 ## Screenshot
 
