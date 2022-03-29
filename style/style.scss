@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -32,19 +33,26 @@ body {
         "seven eight nine multiply"
         "four five six subtract"
         "one two three add"
-        "zero deci backspace equal";
+        "zero deci equal equal";
     padding: 20px;
 
     background-color: palette.$calc-bg;
     border-radius: 10px;
+}
 
-    &__button {
-        font-size: 1.2rem;
-
-        &--round {
-            border-radius: 50%;
-            font-size: 1.2rem;
-        }
+.button {
+    font-size: 1.2rem;
+    border: none;
+    &--round {
+        border-radius: 50%;
+        font-size: 2rem;
+        border: none;
+        -webkit-transition: background 0.2s, border-radius 0.2s;
+        transition: background 0.2s, border-radius 0.2s;
+    }
+    &--round:hover {
+        border-radius: 30px;
+        background-color: palette.$numbers-bg-hover;
     }
 }
 
@@ -58,17 +66,23 @@ body {
     overflow: hidden;
     padding: 5px 10px;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
     font-size: 3rem;
     color: palette.$numbers-text;
     text-align: right;
 }
 .clear {
     grid-area: clear;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: palette.$clear-bg;
+    font-size: 2rem;
     @extend %flexcenter;
     color: palette.$operators-text;
+    -webkit-transition: background 0.2s, border-radius 0.2s;
+    transition: background 0.2s, border-radius 0.2s;
+}
+
+.clear:hover {
+    border-radius: 10px;
 }
 
 // operator grid areas
@@ -124,7 +138,9 @@ body {
 }
 .equal {
     grid-area: equal;
-    background-color: palette.$equals-bg;
+    background-color: palette.$equals-bg !important;
+    border-radius: 10px;
+    font-size: 3rem;
     color: palette.$operators-text;
     @extend %flexcenter;
 }
@@ -134,7 +150,14 @@ body {
     background-color: palette.$operators-bg;
     color: palette.$operators-text;
 }
+.operator:hover {
+    background-color: palette.$operators-bg-hover;
+}
+
 .num {
     background-color: palette.$numbers-bg;
     color: palette.$numbers-text;
+}
+.selected-operator {
+    background-color: palette.$operators-selected !important;
 }

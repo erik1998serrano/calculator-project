@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -23,17 +24,26 @@ body {
   gap: 10px;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(6, 100px);
-  grid-template-areas: "display display display display" "clear clear clear divide" "seven eight nine multiply" "four five six subtract" "one two three add" "zero deci backspace equal";
+  grid-template-areas: "display display display display" "clear clear clear divide" "seven eight nine multiply" "four five six subtract" "one two three add" "zero deci equal equal";
   padding: 20px;
   background-color: #161b1e;
   border-radius: 10px;
 }
-.container__button {
+
+.button {
   font-size: 1.2rem;
+  border: none;
 }
-.container__button--round {
+.button--round {
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  border: none;
+  -webkit-transition: background 0.2s, border-radius 0.2s;
+  transition: background 0.2s, border-radius 0.2s;
+}
+.button--round:hover {
+  border-radius: 30px;
+  background-color: #78aab3;
 }
 
 .display {
@@ -45,7 +55,6 @@ body {
   overflow: hidden;
   padding: 5px 10px;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
   font-size: 3rem;
   color: #dbe3e5;
   text-align: right;
@@ -53,9 +62,16 @@ body {
 
 .clear {
   grid-area: clear;
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: #dfe1f8;
+  font-size: 2rem;
   color: #101c29;
+  -webkit-transition: background 0.2s, border-radius 0.2s;
+  transition: background 0.2s, border-radius 0.2s;
+}
+
+.clear:hover {
+  border-radius: 10px;
 }
 
 .add {
@@ -124,7 +140,9 @@ body {
 
 .equal {
   grid-area: equal;
-  background-color: #b7ebf8;
+  background-color: #b7ebf8 !important;
+  border-radius: 10px;
+  font-size: 3rem;
   color: #101c29;
 }
 
@@ -133,7 +151,17 @@ body {
   color: #101c29;
 }
 
+.operator:hover {
+  background-color: #b5d5ff;
+}
+
 .num {
   background-color: #1a2527;
   color: #dbe3e5;
 }
+
+.selected-operator {
+  background-color: #3a4452 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

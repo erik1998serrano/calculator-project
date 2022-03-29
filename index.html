@@ -4,46 +4,40 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style/style.css" />
+        <title>erik s. | calculator project</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
             rel="stylesheet"
         />
-        <script type="module" src="./js/script.js" defer></script>
-        <title>erik s. | calculator project</title>
+        <link rel="stylesheet" href="./style/style.css" />
     </head>
     <body>
         <div class="container">
             <div class="display">
-                <div class="display__userInput"></div>
+                <div class="display__user-input"></div>
             </div>
 
-            <button class="container__button clear">AC</button>
-            <button class="container__button--round divide operator">÷</button>
-            <button class="container__button--round multiply operator">
-                x
-            </button>
-            <button class="container__button--round subtract operator">
-                -
-            </button>
-            <button class="container__button--round add operator">+</button>
-            <button class="container__button--round seven num">7</button>
-            <button class="container__button--round eight num">8</button>
-            <button class="container__button--round nine num">9</button>
-            <button class="container__button--round four num">4</button>
-            <button class="container__button--round five num">5</button>
-            <button class="container__button--round six num">6</button>
-            <button class="container__button--round one num">1</button>
-            <button class="container__button--round two num">2</button>
-            <button class="container__button--round three num">3</button>
-            <button class="container__button--round zero num">0</button>
-            <button class="container__button--round deci num">.</button>
-            <button class="container__button--round backspace num">
-                &#171;
-            </button>
-            <button class="container__button--round equal">=</button>
+            <button class="button--round divide operator">÷</button>
+            <button class="button--round multiply operator">x</button>
+            <button class="button--round subtract operator">-</button>
+            <button class="button--round add operator">+</button>
+            <button class="button--round seven num">7</button>
+            <button class="button--round eight num">8</button>
+            <button class="button--round nine num">9</button>
+            <button class="button--round four num">4</button>
+            <button class="button--round five num">5</button>
+            <button class="button--round six num">6</button>
+            <button class="button--round one num">1</button>
+            <button class="button--round two num">2</button>
+            <button class="button--round three num">3</button>
+            <button class="button--round zero num">0</button>
+            <button class="button--round deci num">.</button>
+            <div class="clear">AC</div>
+            <div class="equal">=</div>
         </div>
+
+        <script src="./js/scripts.js"></script>
     </body>
 </html>
