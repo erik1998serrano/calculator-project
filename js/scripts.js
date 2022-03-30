@@ -12,12 +12,16 @@ let firstNum, mathOperator, secondNum;
 // loops through the buttons and adds a click event listener.
 for (let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener("click", () => {
+        // write to display
         calculatorDisplay.innerHTML += numberButtons[i].innerHTML;
 
-        // * if statement to store variables for calculation
+        // if statement to store variables for calculation
         if (firstNum) {
             secondNum = calculatorDisplay.innerHTML;
-            // regex to match operators.
+
+            // * going from no numbers selected, to first number selected
+            // checking to see if user has selected an operator or not
+            // ! make sure "-" symbol is on either end of regex or it won't work
         } else if (/[-+÷x]/.test(calculatorDisplay.innerHTML)) {
             filteredDisplayNum = calculatorDisplay.innerHTML.slice(0, -1);
             mathOperator = calculatorDisplay.innerHTML.slice(-1);
@@ -26,6 +30,8 @@ for (let i = 0; i < numberButtons.length; i++) {
             disableOperators();
 
             firstNum = filteredDisplayNum;
+
+            // if operator has been selected clear the display for second value
             calculatorDisplay.innerHTML = "";
         }
     });
@@ -42,6 +48,7 @@ equalButton.addEventListener("click", () => {
             mathOperator,
             secondNum,
         );
+        // resetting everything after calculation is complete
         firstNum = 0;
         mathOperator = "";
         secondNum = 0;
