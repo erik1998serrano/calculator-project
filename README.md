@@ -7,7 +7,7 @@ A calculator that does basic calculator things. Created during the javascript po
 ## Screenshot
 
 <p align="center">
-    <img src="https://i.gyazo.com/dc53d920a2dacdccdd138ab7b22dd024.png" width="300" height="450">
+    <img src="https://i.gyazo.com/7ca5867f8910a9c26399a55dd4a9b555.png" width="300" height="450">
 </p>
 
 ## Goal
