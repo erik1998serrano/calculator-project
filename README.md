@@ -22,7 +22,7 @@ A calculator that does basic calculator things. Created during the javascript po
 -   HTML/SCSS
 
 1. Create a calculator to be rendered to the html page
-1. it should have number keys from 0 to 9
+1. It should have number keys from 0 to 9
 1. It should have operator keys (+, -, /, \*, =)
 1. It should have a display rendering the current calculation in a box at the top
 1. It should also have a "." key
@@ -41,8 +41,8 @@ A calculator that does basic calculator things. Created during the javascript po
 
 -   Rough design of calculator
 -   Figuring out JS
-    -   figure out first how to get numbers show up on the screen upon tap (eventlisteners)
-    -   store values
+    -   Figure out first how to get numbers show up on the screen upon tap (eventlisteners)
+    -   Store values
     -   Implement function to do calculations
 -   Complete design and publish
 
