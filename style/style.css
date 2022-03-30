@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #23272e;
+  background: linear-gradient(20deg, #203137 50%, #29373b 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,5 +163,3 @@ body {
 .selected-operator {
   background-color: #3a4452 !important;
 }
-
-/*# sourceMappingURL=style.css.map */
