@@ -22,8 +22,8 @@ body {
 .container {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(6, 100px);
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(6, 80px);
   grid-template-areas: "display display display display" "clear clear clear divide" "seven eight nine multiply" "four five six subtract" "one two three add" "zero deci equal equal";
   padding: 20px;
   background-color: #161b1e;
