@@ -59,3 +59,6 @@ A calculator that does basic calculator things. Created during the javascript po
 -   Allow for the changing of operator signs
 -   Limit the amount of decimals allowed to 1 (calculation still works regardless of number of decimals added)
 -   Allow a maximum of 1 zero in the display when inputing numbers
+-   Make sure the ‘undefined’ does not get displayed on the screen when not getting the right value.
+-   Add some logic to handle multiple decimal points in the same number
+

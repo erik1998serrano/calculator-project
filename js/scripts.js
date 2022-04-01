@@ -5,13 +5,13 @@ const operatorButtons = document.querySelectorAll(".operator");
 const equalButton = document.querySelector(".equal");
 const clearButton = document.querySelector(".clear");
 
-// store first input operator and second input
+// store first input, operator, and second input
 let firstNum, mathOperator, secondNum;
 
-// * eventlistener to show number or decimal on screen onclick
-// loops through the buttons and adds a click event listener.
+// * eventlistener to show button press on screen onclick
 for (let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener("click", () => {
+        
         // write to display
         calculatorDisplay.innerText += numberButtons[i].innerText;
 
@@ -19,7 +19,7 @@ for (let i = 0; i < numberButtons.length; i++) {
         if (firstNum) {
             secondNum = calculatorDisplay.innerText;
 
-            // * going from no numbers selected, to first number selected
+            // * going from no numbers selected, to first number selected, to second number selected
             // checking to see if user has selected an operator or not
             // ! make sure "-" symbol is on either end of regex or it won't work
         } else if (/[-+÷x]/.test(calculatorDisplay.innerText)) {
@@ -39,6 +39,7 @@ for (let i = 0; i < numberButtons.length; i++) {
 
 // * eventlistener to enable calculate function upon selection of equal button
 equalButton.addEventListener("click", () => {
+    
     // if the last chracter on the display is a decimal then remove it and continue
     if (calculatorDisplay.innerText.endsWith(".")) {
         calculatorDisplay.innerText = calculatorDisplay.innerText.slice(0, -1);
@@ -48,6 +49,7 @@ equalButton.addEventListener("click", () => {
             mathOperator,
             secondNum,
         );
+        
         // resetting everything after calculation is complete
         firstNum = 0;
         mathOperator = "";
@@ -66,6 +68,7 @@ clearButton.addEventListener("click", () => {
 const disableOperators = () => {
     operatorButtons.forEach((btn) => {
         btn.disabled = true;
+        
         // if an operator is selected, disable the other operators
         // ? need to find a way to switch operators
         if (btn.innerText === mathOperator) {
