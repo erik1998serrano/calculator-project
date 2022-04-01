@@ -49,6 +49,7 @@ equalButton.addEventListener("click", () => {
             mathOperator,
             secondNum,
         );
+        
         // resetting everything after calculation is complete
         firstNum = 0;
         mathOperator = "";
