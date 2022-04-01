@@ -13,18 +13,18 @@ let firstNum, mathOperator, secondNum;
 for (let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener("click", () => {
         // write to display
-        calculatorDisplay.innerHTML += numberButtons[i].innerHTML;
+        calculatorDisplay.innerText += numberButtons[i].innerText;
 
         // if statement to store variables for calculation
         if (firstNum) {
-            secondNum = calculatorDisplay.innerHTML;
+            secondNum = calculatorDisplay.innerText;
 
             // * going from no numbers selected, to first number selected
             // checking to see if user has selected an operator or not
             // ! make sure "-" symbol is on either end of regex or it won't work
-        } else if (/[-+÷x]/.test(calculatorDisplay.innerHTML)) {
-            filteredDisplayNum = calculatorDisplay.innerHTML.slice(0, -1);
-            mathOperator = calculatorDisplay.innerHTML.slice(-1);
+        } else if (/[-+÷x]/.test(calculatorDisplay.innerText)) {
+            filteredDisplayNum = calculatorDisplay.innerText.slice(0, -1);
+            mathOperator = calculatorDisplay.innerText.slice(-1);
 
             // disable other operators when operator is selected
             disableOperators();
@@ -32,7 +32,7 @@ for (let i = 0; i < numberButtons.length; i++) {
             firstNum = filteredDisplayNum;
 
             // if operator has been selected clear the display for second value
-            calculatorDisplay.innerHTML = "";
+            calculatorDisplay.innerText = "";
         }
     });
 }
@@ -40,10 +40,10 @@ for (let i = 0; i < numberButtons.length; i++) {
 // * eventlistener to enable calculate function upon selection of equal button
 equalButton.addEventListener("click", () => {
     // if the last chracter on the display is a decimal then remove it and continue
-    if (calculatorDisplay.innerHTML.endsWith(".")) {
-        calculatorDisplay.innerHTML = calculatorDisplay.innerHTML.slice(0, -1);
+    if (calculatorDisplay.innerText.endsWith(".")) {
+        calculatorDisplay.innerText = calculatorDisplay.innerText.slice(0, -1);
     } else {
-        calculatorDisplay.innerHTML = calculate(
+        calculatorDisplay.innerText = calculate(
             firstNum,
             mathOperator,
             secondNum,
@@ -68,7 +68,7 @@ const disableOperators = () => {
         btn.disabled = true;
         // if an operator is selected, disable the other operators
         // ? need to find a way to switch operators
-        if (btn.innerHTML === mathOperator) {
+        if (btn.innerText === mathOperator) {
             btn.classList.add("selected-operator");
         }
     });
