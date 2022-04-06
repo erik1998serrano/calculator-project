@@ -37,6 +37,13 @@ A calculator that does basic calculator things. Created during the javascript po
 
 ## Lifecycle & Implementation details
 
+### Tech Used
+
+-   HTML
+-   CSS
+-   Sass
+-   JavaScript
+
 ### Breakdown of logic
 
 -   Rough design of calculator
@@ -61,4 +68,3 @@ A calculator that does basic calculator things. Created during the javascript po
 -   Allow a maximum of 1 zero in the display when inputing numbers
 -   Make sure the ‘undefined’ does not get displayed on the screen when not getting the right value.
 -   Add some logic to handle multiple decimal points in the same number
-
