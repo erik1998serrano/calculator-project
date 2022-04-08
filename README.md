@@ -4,7 +4,15 @@ A calculator that does basic calculator things. Created during the javascript po
 
 🔗 [Live Demo](https://erikryan-s.github.io/calculator/)
 
-## Screenshot
+## Table of Contents
+
+-   [Screenshots](#screenshots)
+-   [Requirements](#requirements-and-topics-covered)
+-   [Lifecycle and Implementation details](#lifecycle-and-implementation-details)
+-   [Design inspiration](#design-inspiration)
+-   [Future updates and current limitations](#future-updates-and-current-limitations)
+
+## Screenshots
 
 <p align="center">
     <img src="https://i.gyazo.com/7ca5867f8910a9c26399a55dd4a9b555.png" width="300" height="450">
@@ -35,7 +43,7 @@ A calculator that does basic calculator things. Created during the javascript po
     3. It doesn't need to support orders of operation
     4. It should not use eval() or Function() constructor (edited)
 
-## Lifecycle & Implementation details
+## Lifecycle and Implementation details
 
 ### Tech Used
 
