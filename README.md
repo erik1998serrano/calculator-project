@@ -41,7 +41,7 @@ A calculator that does basic calculator things. Created during the javascript po
     1. Should render the current calculation in a box at the top (calculator display)
     2. It should handle decimals
     3. It doesn't need to support orders of operation
-    4. It should not use eval() or Function() constructor (edited)
+    4. It should not use eval() or Function() constructor
 
 ## Lifecycle and Implementation details
 
